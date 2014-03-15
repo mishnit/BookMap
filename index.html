@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+    <link rel="stylesheet" type="text/css" href="assets/jquery.mobile-1.4.2/jquery.mobile-1.4.2.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <title>HOME | BOOKMAP</title>
+</head>
+<body>
+    <div data-role="page" class="bm-page" id="bm-home-page">
+        <div data-role="panel" id="bm-panel-menu" data-position="left" data-display="reveal" data-theme="b">
+            <ul data-role="listview">
+                <li><a href="#bm-about-page" data-transition="none" class="ui-icon-carat-r ui-nodisc-icon">About</a></li>
+                <li><a href="#bm-help-page" data-transition="none" class="ui-icon-carat-r ui-nodisc-icon">Help</a></li>
+            </ul>
+        </div>
+        <div data-role="header" class="bm-header" data-position="fixed">
+            <h2><img src="img/bookmap-logo.png" alt="BOOKMAP"></h2>
+            <a href="#bm-panel-menu" class="ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a>
+            <a href="list.html" class="ui-btn ui-btn-icon-notext ui-corner-all ui-icon-search ui-nodisc-icon ui-alt-icon ui-btn-right">Menu</a>
+        </div>
+        <div role="main" class="ui-content">
+            <div id="bm-home-map-canvas"></div>
+            <div class="ui-grid-a">
+                <div class="ui-block-a"><a href="#bm-save-popup" data-position-to="window" data-transition="pop" data-rel="popup" class="ui-btn ui-btn-b ui-btn-icon-left ui-icon-star ui-nodisc-icon" id="bm-save-btn">Save</a></div>
+                <div class="ui-block-b"><a href="list.html" class="ui-btn ui-btn ui-btn-icon-left ui-icon-location ui-alt-icon ui-nodisc-icon" id="bm-list-btn">List</a></div>
+            </div>
+            <div data-role="popup" id="bm-save-popup" data-overlay-theme="b" data-theme="a">
+                <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+                <form action="map.html" method="get">
+                    <div style="padding:0 20px 10px 20px;">
+                        <h3>Save your position</h3>
+                        <input type="hidden" name="requestType" value="set">
+                        <label for="name" class="ui-hidden-accessible">Name:</label>
+                        <input type="text" name="name" id="name" value="" placeholder="Name" data-theme="a" data-clear-btn="true">
+                        <button type="submit" class="ui-btn ui-btn-b ui-btn-icon-left ui-icon-check ui-nodisc-icon">Done</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div data-role="footer" class="bm-footer" data-position="fixed">
+            <h4>@zackijack</h4>
+        </div>
+    </div>
+    <div data-role="page" class="bm-page" id="bm-about-page">
+        <div data-role="header" class="bm-header" data-position="fixed">
+            <h1>ABOUT</h1>
+            <a href="#" data-rel="back" class="ui-btn ui-btn-icon-notext ui-corner-all ui-icon-carat-l ui-nodisc-icon ui-alt-icon ui-btn-left">Back</a>
+        </div>
+        <div role="main" class="ui-content">
+            <h1>About</h1>
+            <p>BookMap is user-friendly App to bookmark your location</p>
+
+            <h2>Version</h2>
+
+            <p>Bookmap version: 1.0.0</p>
+        </div>
+        <div data-role="footer" class="bm-footer" data-position="fixed">
+            <h4>@zackijack</h4>
+        </div>
+    </div>
+    <div data-role="page" class="bm-page" id="bm-help-page">
+        <div data-role="header" class="bm-header" data-position="fixed">
+            <h1>HELP</h1>
+            <a href="#" data-rel="back" class="ui-btn ui-btn-icon-notext ui-corner-all ui-icon-carat-l ui-nodisc-icon ui-alt-icon ui-btn-left">Back</a>
+        </div>
+        <div role="main" class="ui-content">
+            <h1>Help</h1>
+            <p>BookMap...</p>
+
+            <h2>Home Page</h2>
+
+            <p>Home page</p>
+            
+            <h2>Map Page</h2>
+
+            <p>Map page</p>
+                        
+            <h2>List Page</h2>
+
+            <p>List page</p>
+        </div>
+        <div data-role="footer" class="bm-footer" data-position="fixed">
+            <h4>@zackijack</h4>
+        </div>
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="assets/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript">$(document).on( 'mobileinit', function(){$.mobile.defaultPageTransition = 'slide';});</script>
+    <script type="text/javascript" src="assets/jquery.mobile-1.4.2/jquery.mobile-1.4.2.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/maps.js"></script>
+    <script type="text/javascript" src="js/positions.js"></script>
+    <script type="text/javascript">$(document).one('deviceready', initializeApplication);</script>
+</body>
+</html>

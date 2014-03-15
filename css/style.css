@@ -1,0 +1,47 @@
+.bm-page .bm-header .ui-btn 
+{
+    width: 2em;
+    height: 2em;
+    background: none;
+    border: 0;
+    top: 50%;
+    margin-top: -1em;
+    -webkit-border-radius: .3125em;
+    border-radius: .3125em;
+    opacity: .4;
+    filter: Alpha(Opacity=40);
+}
+.bm-page .bm-header {
+    background: #fff;
+    border-top: 4px solid #2ad;
+    border-bottom-color: #eee
+}
+.bm-page .bm-header h2 > img {
+    display: inline-block;
+}
+
+.bm-page .bm-header h2 {
+    padding: .4em 0 .1em;
+    margin: 0 3em;
+}
+.bm-page .bm-header h2 a {
+    display: inline-block;
+    text-decoration: none;
+    min-height: 40px;
+}
+.bm-page .bm-header h2 img {
+    display: block;
+    width: 140px;
+    height: auto;
+}
+.bm-page .bm-header h2 > img {
+    display: inline-block;
+}
+
+.bm-page .bm-footer {
+    border-top: 1px solid #2ad
+}
+
+#bm-map-content {
+    padding: 0 !important
+}

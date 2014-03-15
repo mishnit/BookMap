@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id       = "ac.id.mzackky.student.gunadarma.bookmap"
+        version   = "1.0.0">
+
+  <name>BookMap</name>
+
+  <description>BookMap is user-friendly App to bookmark your location</description>
+
+  <author email="m.zackky@student.gunadarma.ac.id" href="http://54409201.student.gunadarma.ac.id/">Muhammad Zackky (54409201)</author>
+
+  <feature name="http://api.phonegap.com/1.0/network"/>
+  <feature name="http://api.phonegap.com/1.0/geolocation"/>
+
+  <preference name="phonegap-version" value="2.9.0" />
+  <preference name="target-device" value="universal" />
+  <preference name="orientation" value="portrait" />
+
+  <icon src="icon.png" />
+  <icon src="img/icons/36px.png" gap:platform="android" gap:density="ldpi" />
+  <icon src="img/icons/48px.png" gap:platform="android" gap:density="mdpi" />
+  <icon src="img/icons/72px.png" gap:platform="android" gap:density="hdpi" />
+  <icon src="img/icons/96px.png" gap:platform="android" gap:density="xhdpi" />
+  <icon src="img/icons/36px.png" gap:platform="blackberry" />
+  <icon src="img/icons/48px.png" gap:platform="winphone" />
+   
+  <gap:splash src="splash.png" />
+  <gap:splash src="img/splash/200x320px.png" gap:platform="android" gap:density="ldpi" />
+  <gap:splash src="img/splash/320x480px.png" gap:platform="android" gap:density="mdpi" />
+  <gap:splash src="img/splash/480x800px.png" gap:platform="android" gap:density="hdpi" />
+  <gap:splash src="img/splash/720x1280px.png" gap:platform="android" gap:density="xhdpi" />
+  <gap:splash src="img/splash/250x250px.png" gap:platform="blackberry" />
+  <gap:splash src="img/splash/480x800px.jpg" gap:platform="winphone" />
+</widget>
