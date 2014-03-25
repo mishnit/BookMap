@@ -4,9 +4,9 @@
         id       = "ac.id.mzackky.student.gunadarma.bookmap"
         version   = "1.0.0">
 
-  <name>BookMap</name>
+  <name>Bookmap</name>
 
-  <description>BookMap is user-friendly App to bookmark your location</description>
+  <description>Bookmap is an application for multi-platform mobile devices that lets you bookmark your location, and then find a route to return to it.</description>
 
   <author email="m.zackky@student.gunadarma.ac.id" href="http://54409201.student.gunadarma.ac.id/">Muhammad Zackky (54409201)</author>
 

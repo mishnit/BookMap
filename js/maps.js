@@ -22,36 +22,37 @@ Map.displayMap = function(userPosition, objectPosition, idMapCanvas)
     var marker = new google.maps.Marker({
         map: map,
         position: userLatLng,
-        icon: 'img/pin-blue-12.png',
-        title: 'Your position'
+        icon: "img/pin-blue-12.png",
+        title: "Your position"
    });
 
     var circle = new google.maps.Circle({
         map: map,
         center: userLatLng,
         radius: userPosition.coords.accuracy,
-        strokeColor: '#2ad',
+        strokeColor: "#2ad",
         strokeOpacity: 0.8,
-        fillColor: '#a7ddf1',
+        fillColor: "#a7ddf1",
         fillOpacity: 0.35
     });
     map.fitBounds(circle.getBounds());
 
-    if (objectPosition != null)
+    if (objectLatLng != null)
     {
         marker = new google.maps.Marker({
             map: map,
             position: objectLatLng,
-            icon: 'img/pin-red-12.png',
-            title: 'Your Destination'
+            icon: "img/pin-red-12.png",
+            title: "Your Destination"
         });
+        
         circle = new google.maps.Circle({
             map: map,
             center: objectLatLng,
             radius: objectPosition.position.accuracy,
-            strokeColor: '#e74c3c',
+            strokeColor: "#e74c3c",
             strokeOpacity: 0.8,
-            fillColor: '#f5b7b1',
+            fillColor: "#f5b7b1",
             fillOpacity: 0.35
         });
 
@@ -62,8 +63,7 @@ Map.displayMap = function(userPosition, objectPosition, idMapCanvas)
         }
         this.setRoute(new google.maps.DirectionsRenderer(options), userLatLng, objectLatLng);
     }
-    $.mobile.loading('hide');
-    console.log('userLatLng: ' + userLatLng + ' objectLatLng: ' + objectLatLng);
+    $.mobile.loading("hide");
 }
 
 Map.setRoute = function(directionsDisplay, userLatLng, objectLatLng)
@@ -85,9 +85,9 @@ Map.setRoute = function(directionsDisplay, userLatLng, objectLatLng)
             else
             {
                 navigator.notification.alert(
-                    'Unable to retrieve a route to your destination.',
+                    "Unable to retrieve a route to your destination.",
                     function(){},
-                    'Warning'
+                    "Warning"
                 );
             }
         }
@@ -98,7 +98,7 @@ Map.requestLocation = function(position, positionName)
 {
     new google.maps.Geocoder().geocode(
         {
-            'location': new google.maps.LatLng(position.coords.latitude, position.coords.longitude)
+            "location": new google.maps.LatLng(position.coords.latitude, position.coords.longitude)
         },
         function(results, status)
         {

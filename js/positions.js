@@ -16,11 +16,10 @@ function Position(position, address, datetime)
    {
       if (!_db)
       {
-         console.log('The database is null. Unable to save position');
          navigator.notification.alert(
-            'Unable to save position',
+            "Unable to save position",
             function(){},
-            'Error'
+            "Error"
          );
       }
 
@@ -33,7 +32,7 @@ function Position(position, address, datetime)
       if (positions.length > this.MAX_POSITIONS)
          positions = positions.slice(0, this.MAX_POSITIONS);
 
-      _db.setItem('positions', JSON.stringify(positions));
+      _db.setItem("positions", JSON.stringify(positions));
 
       return positions;
    }
@@ -42,11 +41,10 @@ function Position(position, address, datetime)
    {
       if (!_db)
       {
-         console.log('The database is null. Unable to update position');
          navigator.notification.alert(
-            'Unable to update position',
+            "Unable to update position",
             function(){},
-            'Error'
+            "Error"
          );
       }
 
@@ -58,7 +56,7 @@ function Position(position, address, datetime)
          positions[index].name = name;
       }
 
-      _db.setItem('positions', JSON.stringify(positions));
+      _db.setItem("positions", JSON.stringify(positions));
 
       return positions;
    }
@@ -67,11 +65,10 @@ function Position(position, address, datetime)
    {
       if (!_db)
       {
-         console.log('The database is null. Unable to delete position');
          navigator.notification.alert(
-            'Unable to delete position',
+            "Unable to delete position",
             function(){},
-            'Error'
+            "Error"
          );
       }
 
@@ -79,7 +76,7 @@ function Position(position, address, datetime)
       if (positions != null && positions[index] != undefined)
          positions.splice(index, 1);
 
-      _db.setItem('positions', JSON.stringify(positions));
+      _db.setItem("positions", JSON.stringify(positions));
 
       return positions;
    }
@@ -88,21 +85,19 @@ function Position(position, address, datetime)
    {
       if (!_db)
       {
-         console.log('The database is null. Unable to retrieve positions');
          navigator.notification.alert(
-            'Unable to retrieve positions',
+            "Unable to retrieve positions",
             function(){},
-            'Error'
+            "Error"
          );
       }
 
-      var positions = JSON.parse(_db.getItem('positions'));
+      var positions = JSON.parse(_db.getItem("positions"));
       if (positions == null)
          positions = [];
 
       return positions;
    }
-
 }
 
 function Coords(latitude, longitude, accuracy)
