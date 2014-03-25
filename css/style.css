@@ -14,7 +14,7 @@
 .bm-page .bm-header {
     background: #fff;
     border-top: 4px solid #2ad;
-    border-bottom-color: #eee
+    border-bottom-color: #eee;
 }
 .bm-page .bm-header h2 > img {
     display: inline-block;
@@ -39,9 +39,9 @@
 }
 
 .bm-page .bm-footer {
-    border-top: 1px solid #2ad
+    border-top: 1px solid #2ad;
 }
 
 #bm-map-content {
-    padding: 0 !important
+    padding: 0 !important;
 }
